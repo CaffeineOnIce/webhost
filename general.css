@@ -74,7 +74,7 @@ ul.languages {
 ul.languages li {
   display: inline-block;
   list-style: none;
-  padding: calc(5px + 0.5vh) calc(10px + 0.5vw);
+  padding: calc(5px + 0.5vh) calc(10px + 0.5vw) 0;
 }
 
 ul.languages img {
