@@ -93,7 +93,7 @@ var encrypted = document.getElementById("encoded");
 
 function startdecrypt() {
 	// Original text, split into an array and reversed (for faster pop())
-	var originalText = "Samanawaya".split('').reverse();
+	var originalText = decrypted.textContent.split('').reverse();
 	var decryptedText = "";
 	var i = 0;
 
