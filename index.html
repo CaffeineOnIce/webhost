@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <title>temp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="general.css">
+  <link rel="icon" type="image/x-icon" href="assets/misc/favicon.png">
+</head>
+
+<body>
+
+  <button id="button" onclick="themeChange()">Light</button>
+  <div class="container">
+
+    <div class="titleBar">
+      <span id="title">
+        <span id="decoded"></span><span id="encoded"></span>
+        <span></span> <!--Used to maintain the shift in height of the title-->
+      </span>
+      <ul style="padding-left: 0px;">
+        <li><a href="https://github.com/CaffeineOnIce/" target="_blank"><img id="github" src="assets/imgsLight/github.svg"></a></li>
+        <li><a href="https://twitter.com/IceWithCaffeine" target="_blank"><img id="twitter" src="assets/imgsLight/twitter.svg"></a></li>
+        <li><a onclick="discord()"><img id="discord" src="assets/imgsLight/discord.svg"></a></li>
+      </ul>
+    </div>
+
+    <br>
+
+    <h3>This is my page I guess.</h3>
+    Currrently a CS student. I mostly develop websites and do some stuff from time to time like build stuff, learn languages (not exactly fluent), et cetera.<br><br>
+
+    Most of the things I develop are undocumented.
+    <h4 style="margin-bottom: 0px;">Decently average in:</h4>
+    <ul class="languages">
+      <li><img id="java" src="assets/imgsLight/java.svg"> Java</li>
+      <li><img id="html5" src="assets/imgsLight/html5.svg"> HTML</li>
+      <li><img id="css3" src="assets/imgsLight/css3.svg"> CSS</li>
+      <li><img id="c" src="assets/imgsLight/c.svg"> C</li>
+      <li><img id="python" src="assets/imgsLight/python.svg"> Python</li>
+    </ul>
+
+    I draw in free time. These are documented though.
+
+    <ul class="images" id="images">
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//1.jpg"></li>
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//2.jpg"></li>
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//3.jpg"></li>
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//4.jpg"></li>
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//5.jpg"></li>
+      <li><img onclick="imgEnlarge(this)" src="assets/illustrations//6.jpg"></li>
+    </ul>
+  </div>
+
+  <div class="search" id="search"><input type="text" id="txtbox" onkeypress="search(event)" />
+    <div>//<span id="databox"></span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* universal selectors */
+:root {
+  --dark: #303030;
+  --light: #c3c3c3;
+  --containerLight: #eeeeee;
+  --containerDark: #292929;
+  --darkText: #c6c6c6;
+  --lightText: #3c3b3b;
+}
+
+@font-face {
+  src: url("assets/fonts/Silkscreen-Regular.ttf");
+  font-family: "Silkscreen";
+}
+
+@font-face {
+  src: url("assets/fonts/Comfortaa-Regular.ttf");
+  font-family: "Comfortaa-Regular";
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 0.5s ease-in-out;
+}
+
+/*Body selectors*/
+body {
+  font-size: calc(110.5% + 2 * (105vw - 650px) / 400);
+  font-family: "Comfortaa-Regular";
+  text-align: center;
+  display: block;
+  position: relative;
+  background-image: url("assets/misc/dark.png");
+  transition: all 0.5s ease-in-out;
+}
+
+body > button {
+  height: calc(35px - 0.5vh);
+  font-family: "Silkscreen";
+  font-size: calc(24px - 0.5vh);
+  z-index: 1;
+  top: 1vh;
+  border-radius: 5px;
+  display: block;
+  position: fixed;
+  left: auto;
+  right: 1vw;
+  text-align: center;
+  background-color: var(--containerLight);
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  top: 2.5rem;
+  margin: 2rem 0 3.5rem;
+  width: calc(70vw - 5%);
+  background-color: var(--containerDark);
+  border: 2px var(--containerDark) solid;
+  border-radius: 10px;
+  line-height: 1.65rem;
+  padding: 30px;
+}
+
+/* List selectors */
+ul.languages {
+  margin: 0px 0px 2.5vh;
+  padding: 0px;
+}
+
+ul.languages li {
+  display: inline-block;
+  list-style: none;
+  padding: calc(5px + 0.5vh) calc(10px + 0.5vw);
+}
+
+ul.languages img {
+  background-color: var(--containerDark);
+  height: 3vmin;
+  vertical-align: text-bottom;
+  transition: all 0.5s ease-in-out;
+}
+
+ul.images {
+  margin: 2.5vh 0px;
+  padding: 0px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+ul.images::-webkit-scrollbar {
+  display: none;
+}
+
+ul.images li {
+  display: inline-block;
+  list-style: none;
+  padding: calc(5px + 0.5vh) calc(8px + 0.5vw);
+}
+
+ul.images img {
+  background-color: var(--containerDark);
+  height: 15.5vmin;
+  vertical-align: middle;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  border: 3px var(--containerDark) solid;
+}
+
+.title {
+  justify-content: left;
+  display: inline-block;
+}
+
+/*Search selectors*/
+.search {
+  display: inline-flex;
+  position: relative;
+  width: calc(70vw - 5%);
+  background-color: var(--containerDark);
+  border: 2px var(--containerDark) solid;
+  top: 2.5rem;
+  margin-bottom: 4.5rem;
+  border-radius: 10px;
+  line-height: 1.8rem;
+  padding: 0px 30px;
+  transition: all 0.5s ease-in-out;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: top;
+}
+
+input[type="text"] {
+  align-items: left;
+  font-size: inherit;
+  font-family: "Comfortaa-Regular";
+  height: 2.65rem;
+  margin: 0;
+  width: 20%;
+  background-color: var(--containerDark);
+  border: 0px var(--containerDark) solid;
+  color: var(--darkText);
+  border-radius: 10px;
+  caret-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px none;
+}
+
+/* title bar selectors*/
+.titleBar {
+  display: flex;
+  font-family: "Silkscreen";
+  font-size: 2.45rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBar > ul {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.titleBar img {
+  background-color: var(--containerDark);
+  height: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.titleBar li {
+  padding: 5px;
+  float: left;
+  list-style: none;
+}
+
+/* Light text color */
+.light > button,
+.titleBar,
+.container,
+.search {
+  color: var(--darkText);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Dark selectors */
+body > button,
+.light .titleBar,
+.light .container,
+.light > .search,
+.light > .search > input[type="text"] {
+  color: var(--lightText);
+}
+
+.light {
+  background-color: #fafafa;
+}
+
+.light > .container,
+.light > .search,
+.light > .search > input[type="text"] {
+  background-color: var(--containerLight);
+  border: 2px var(--containerLight) solid;
+}
+
+.light > button {
+  background-color: var(--dark);
+}
+
+.light .container img {
+  background-color: var(--containerLight);
+}
+
+/* Media Queries */
+@media only screen and (max-device-width: 384.5px) and (max-device-height: 812.5px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  body > button {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: calc(30px - 1vh);
+  }
+
+  .container {
+    line-height: 1rem;
+  }
+
+  .container > ul:nth-of-type(1) {
+    line-height: 0.5vh;
+  }
+
+  .titleBar {
+    font-size: 1.15rem;
+  }
+
+  .titleBar img {
+    height: 3.5vw;
+  }
+}
+
+@media only screen and (min-device-width: 384.5px) and (max-device-width: 411.5px) and (min-device-height: 812.5px) and (max-device-height: 882.5px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  body > button {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: calc(30px - 1vh);
+  }
+
+  .container {
+    line-height: 1rem;
+  }
+
+  .container > ul:nth-of-type(1) {
+    line-height: 0.5vh;
+  }
+
+  .titleBar {
+    font-size: 1.25rem;
+  }
+
+  .titleBar img {
+    height: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 411.5px) and (max-device-width: 414.5px) and (min-device-height: 882.5px) and (max-device-height: 896.5px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  body > button {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: calc(30px - 1vh);
+  }
+
+  .container {
+    line-height: 1rem;
+  }
+
+  .container > ul:nth-of-type(1) {
+    line-height: 0.25vh;
+  }
+
+  .titleBar {
+    font-size: 1.25rem;
+  }
+
+  .titleBar img {
+    height: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 414.5px) and (max-device-width: 428.5px) and (min-device-height: 896.5px) and (max-device-height: 926.5px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  body > button {
+    font-size: 0.8rem;
+    border-radius: 5px;
+    height: calc(30px - 1vh);
+  }
+
+  .container {
+    line-height: 1rem;
+  }
+
+  .container > ul:nth-of-type(1) {
+    line-height: 0.25vh;
+  }
+
+  .titleBar {
+    font-size: 1.35rem;
+  }
+
+  .titleBar img {
+    height: 1.2rem;
+  }
+}
