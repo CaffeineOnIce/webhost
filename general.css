@@ -34,14 +34,14 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-body > button {
+button {
   height: calc(35px - 0.5vh);
   font-family: "Silkscreen";
   font-size: calc(24px - 0.5vh);
   z-index: 1;
   top: 1vh;
   border-radius: 5px;
-  display: block;
+  display: flex;
   position: fixed;
   left: auto;
   right: 1vw;
@@ -49,6 +49,7 @@ body > button {
   background-color: var(--containerLight);
   border: none;
   transition: all 0.5s ease-in-out;
+  vertical-align: middle;
 }
 
 .container {
